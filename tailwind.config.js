@@ -1,5 +1,6 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 const colors = require('tailwindcss/colors')
+const plugin = require('tailwindcss/plugin')
 
 module.exports = {
   mode: 'jit',
@@ -36,6 +37,7 @@ module.exports = {
         'gradient-3-start': '#A100F2',
         'gradient-3-end': '#2D00F7',
       },
+
       colors: {
         primary: {
           100: '#FDD1D9',
@@ -106,7 +108,7 @@ module.exports = {
               '&:hover': {
                 color: theme('colors.gray.700'),
               },
-              code: { color: theme('colors.primary.400') },
+              code: { color: theme('colors.green.400') },
             },
             h1: {
               fontWeight: '700',
@@ -169,7 +171,7 @@ module.exports = {
               '&:hover': {
                 color: theme('colors.gray.300'),
               },
-              code: { color: theme('colors.primary.400') },
+              code: { color: theme('colors.green.400') },
             },
             h1: {
               fontWeight: '700',

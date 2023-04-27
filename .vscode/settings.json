@@ -1,0 +1,9 @@
+{
+  "editor.formatOnSave": false,
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll": false
+  }
+}
