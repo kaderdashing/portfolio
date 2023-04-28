@@ -1,21 +1,21 @@
-import headerNavLinks from '@/data/headerNavLinks'
-import classNames from 'classnames'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
-import { useEffect, useState } from 'react'
+import headerNavLinks from '@/data/headerNavLinks';
+import classNames from 'classnames';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
 
 const MobileNav = () => {
-  const router = useRouter()
-  const [navShow, setNavShow] = useState(false)
+  const router = useRouter();
+  const [navShow, setNavShow] = useState(false);
 
   useEffect(() => {
     if (navShow) {
       // Prevent scrolling
-      document.body.style.overflow = 'hidden'
+      document.body.style.overflow = 'hidden';
     } else {
-      document.body.style.overflow = 'auto'
+      document.body.style.overflow = 'auto';
     }
-  }, [navShow])
+  }, [navShow]);
 
   return (
     <div className="sm:hidden">
@@ -78,7 +78,7 @@ const MobileNav = () => {
             </Link>
           </div>
           {headerNavLinks.map(({ title, href }) => {
-            const active = router.pathname.includes(href)
+            const active = router.pathname.includes(href);
 
             return (
               <div key={title} className="px-12 py-4">
@@ -94,12 +94,12 @@ const MobileNav = () => {
                   {title}
                 </Link>
               </div>
-            )
+            );
           })}
         </nav>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default MobileNav
+export default MobileNav;

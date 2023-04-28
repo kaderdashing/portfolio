@@ -1,27 +1,29 @@
-import { AnimatePresence, motion } from 'framer-motion'
-import Link from 'next/link'
-import { ReactElement, useContext, useEffect, useRef } from 'react'
-import { HiOutlineArrowNarrowDown } from 'react-icons/hi'
-import FadeDown from './Animations/FadeDown'
-import FadeRight from './Animations/FadeRight'
-import FadeUp from './Animations/FadeUp'
-import { renderCanvas } from './renderCanvas'
-import { ScrollContext } from './ScrollObserver'
+import { AnimatePresence, motion } from 'framer-motion';
+import Link from 'next/link';
+import { ReactElement, useContext, useEffect, useRef } from 'react';
+import { HiOutlineArrowNarrowDown } from 'react-icons/hi';
+import Typewriter from 'typewriter-effect';
+
+import FadeDown from './Animations/FadeDown';
+import FadeRight from './Animations/FadeRight';
+import FadeUp from './Animations/FadeUp';
+import { renderCanvas } from './renderCanvas';
+import { ScrollContext } from './ScrollObserver';
 
 export default function Hero(): ReactElement {
-  const ref = useRef<HTMLHeadingElement>(null)
-  const { scrollY } = useContext(ScrollContext)
+  const ref = useRef<HTMLHeadingElement>(null);
+  const { scrollY } = useContext(ScrollContext);
 
-  let progress = 0
-  const { current: elContainer } = ref
+  let progress = 0;
+  const { current: elContainer } = ref;
 
   if (elContainer) {
-    progress = Math.min(1, scrollY / elContainer.clientHeight)
+    progress = Math.min(1, scrollY / elContainer.clientHeight);
   }
 
   useEffect(() => {
-    renderCanvas()
-  }, [])
+    renderCanvas();
+  }, []);
 
   return (
     <div>
@@ -37,17 +39,29 @@ export default function Hero(): ReactElement {
         transition={{ type: 'spring', stiffness: 50 }}
       >
         <AnimatePresence>
-          <div className="mx-auto w-screen max-w-3xl px-4 sm:px-9 xl:max-w-5xl xl:px-0">
+          <div className="mx-auto w-screen max-w-4xl px-4 sm:px-9 xl:max-w-6xl xl:px-0">
             <div className="-mt-36">
               <div ref={ref} className="flex cursor-default flex-col space-y-2">
                 <FadeUp duration={0.6}>
-                  <h1 className="text-5xl font-semibold sm:text-7xl md:text-8xl xl:text-9xl">
+                  <h1 className="text-4xl font-extrabold sm:text-7xl md:text-8xl xl:text-9xl">
                     Youssouf Kacemi
                   </h1>
                 </FadeUp>
                 <FadeUp duration={0.6} delay={0.2}>
-                  <h2 className="text-3xl font-medium opacity-80 sm:text-6xl md:text-6xl xl:text-7xl">
-                    I build things for the web.
+                  <h2 className="text-3xl font-medium  opacity-90 sm:text-6xl md:text-6xl xl:text-7xl">
+                    {/* I build things for the web. */}
+                    <Typewriter
+                      options={{
+                        strings: [
+                          'I build things for the web and mobile.',
+                          'I design beautiful UIs.',
+                          'I build UI Libraries and open source packages.',
+                        ],
+                        autoStart: true,
+                        loop: true,
+                        delay: 300,
+                      }}
+                    />
                   </h2>
                 </FadeUp>
                 <FadeRight duration={0.5} delay={0.8}>
@@ -64,9 +78,9 @@ export default function Hero(): ReactElement {
                   role="presentation"
                   className="flex cursor-pointer flex-col items-center justify-center"
                   onClick={() => {
-                    const intro = document.querySelector('#intro')
+                    const intro = document.querySelector('#intro');
 
-                    intro?.scrollIntoView({ behavior: 'smooth' })
+                    intro?.scrollIntoView({ behavior: 'smooth' });
                   }}
                 >
                   <FadeDown duration={1} delay={1.2}>
@@ -80,5 +94,5 @@ export default function Hero(): ReactElement {
       </motion.div>
       <canvas className="bg-skin-base pointer-events-none absolute inset-0" id="canvas"></canvas>
     </div>
-  )
+  );
 }

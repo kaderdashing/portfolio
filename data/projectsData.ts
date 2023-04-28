@@ -13,6 +13,6 @@ const projectsData = [
     tag: ['javascript', 'css'],
     href: 'https://snakegame-dlarroder.vercel.app/',
   },
-]
+];
 
-export default projectsData
+export default projectsData;

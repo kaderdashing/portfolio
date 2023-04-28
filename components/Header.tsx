@@ -1,13 +1,14 @@
-import headerNavLinks from '@/data/headerNavLinks'
-import classNames from 'classnames'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
-import CommandPalette from './CommandPalette/CommandPalette'
-import MobileNav from './MobileNav'
-import ThemeSwitch from './ThemeSwitch'
+import headerNavLinks from '@/data/headerNavLinks';
+import classNames from 'classnames';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import CommandPalette from './CommandPalette/CommandPalette';
+import MobileNav from './MobileNav';
+import ThemeSwitch from './ThemeSwitch';
+import Typewriter from 'typewriter-effect';
 
 export default function Header() {
-  const router = useRouter()
+  const router = useRouter();
 
   return (
     <header className="z-40 bg-transparent py-5 md:py-10">
@@ -16,20 +17,40 @@ export default function Header() {
           <Link href="/" className="flex items-center justify-between" aria-label="Home">
             <div
               className={classNames(
-                'horizontal-underline hidden text-3xl font-extrabold sm:block',
+                'horizontal-underline hidden font-mukta text-2xl font-extrabold sm:block',
                 {
                   'horizontal-underline-active': router.pathname === '/',
                 }
               )}
             >
-              d.
+              <Typewriter
+                options={{
+                  strings: ['~/dr1tch'],
+                  autoStart: true,
+                  loop: true,
+                }}
+                // onInit={(typewriter) => {
+                //   typewriter
+                //     .typeString('dritch')
+                //     .callFunction(() => {
+                //       console.log('String typed out!');
+                //     })
+                //     .pauseFor(2500)
+                //     .deleteAll()
+                //     .callFunction(() => {
+                //       console.log('All strings were deleted');
+                //     })
+                //     .start();
+                // }}
+              />
+              {/* dr1tch */}
             </div>
           </Link>
         </div>
         <div className="flex items-center space-x-3 text-base leading-5">
           <div className="hidden space-x-5 sm:flex">
             {headerNavLinks.map(({ title, href }) => {
-              const active = router.pathname.includes(href)
+              const active = router.pathname.includes(href);
               return (
                 <Link
                   key={title}
@@ -43,7 +64,7 @@ export default function Header() {
                     {title}
                   </span>
                 </Link>
-              )
+              );
             })}
           </div>
           <div className="flex items-center">
@@ -54,5 +75,5 @@ export default function Header() {
         </div>
       </div>
     </header>
-  )
+  );
 }

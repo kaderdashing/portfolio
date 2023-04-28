@@ -1,11 +1,11 @@
-import Image from './Image'
-import Link from './Link'
+import Image from './Image';
+import Link from './Link';
 
 interface CardProps {
-  title: string
-  description: string
-  imgSrc: string
-  href: string
+  title: string;
+  description: string;
+  imgSrc: string;
+  href: string;
 }
 
 export default function Card({ title, description, imgSrc, href }: CardProps) {
@@ -45,5 +45,5 @@ export default function Card({ title, description, imgSrc, href }: CardProps) {
         </div>
       </div>
     </div>
-  )
+  );
 }

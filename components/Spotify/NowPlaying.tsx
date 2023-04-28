@@ -1,10 +1,10 @@
-import fetcher from 'lib/fetcher'
-import useSWR from 'swr'
-import { NowPlayingSong } from '../../types/Spotify'
-import AnimatedBars from './AnimatedBars'
+import fetcher from 'lib/fetcher';
+import useSWR from 'swr';
+import { NowPlayingSong } from '../../types/Spotify';
+import AnimatedBars from './AnimatedBars';
 
 export default function NowPlaying() {
-  const { data: nowPlaying } = useSWR<NowPlayingSong>('/api/now-playing', fetcher)
+  const { data: nowPlaying } = useSWR<NowPlayingSong>('/api/now-playing', fetcher);
 
   if (!nowPlaying?.songUrl || !nowPlaying.title || !nowPlaying.artist) {
     return (
@@ -21,7 +21,7 @@ export default function NowPlaying() {
           <p className="text-gray-500 dark:text-gray-300">Spotify</p>
         </div>
       </div>
-    )
+    );
   }
 
   return (
@@ -42,5 +42,5 @@ export default function NowPlaying() {
         </p>
       </div>
     </div>
-  )
+  );
 }

@@ -5,6 +5,7 @@ tags: ['ReactJs', Snippets]
 draft: false
 author: 'Dale Larroder'
 summary: 'This article will show you what is the purpose if the “key” prop in React and some best practices around it.'
+cover: 'https://images.unsplash.com/photo-1566241440091-ec10de8db2e1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1616&q=80'
 ---
 
 ## Overview
@@ -64,10 +65,10 @@ const todos = [
     name: 'eat breakfast',
   },
   // ....
-]
+];
 
 // Much better
-todos.map((todo) => <Todo {...todo} key={todo.id} />)
+todos.map((todo) => <Todo {...todo} key={todo.id} />);
 ```
 
 # Conclusion

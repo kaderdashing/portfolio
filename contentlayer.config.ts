@@ -1,10 +1,11 @@
-import { ComputedFields, defineDocumentType, makeSource } from 'contentlayer/source-files'
-import readingTime from 'reading-time'
-import rehypeAutolinkHeadings from 'rehype-autolink-headings'
-import rehypePrismPlus from 'rehype-prism-plus'
-import rehypeSlug from 'rehype-slug'
-import remarkCodeTitles from './lib/remark-code-title'
-import { extractTocHeadings } from './lib/remark-toc-headings'
+import { ComputedFields, defineDocumentType, makeSource } from 'contentlayer/source-files';
+import readingTime from 'reading-time';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import rehypePrismPlus from 'rehype-prism-plus';
+import rehypeSlug from 'rehype-slug';
+import remarkCodeTitles from './lib/remark-code-title';
+import { extractTocHeadings } from './lib/remark-toc-headings';
+import rehypeHighlight from 'rehype-highlight/lib';
 
 const computedFields: ComputedFields = {
   readingTime: { type: 'json', resolve: (doc) => readingTime(doc.body.raw) },
@@ -13,7 +14,7 @@ const computedFields: ComputedFields = {
     resolve: (doc) => doc._raw.flattenedPath.replace(/^.+?(\/)/, ''),
   },
   toc: { type: 'string', resolve: (doc) => extractTocHeadings(doc.body.raw) },
-}
+};
 
 export const Blog = defineDocumentType(() => ({
   name: 'Blog',
@@ -31,9 +32,10 @@ export const Blog = defineDocumentType(() => ({
     layout: { type: 'string' },
     bibliography: { type: 'string' },
     canonicalUrl: { type: 'string' },
+    cover: { type: 'string' },
   },
   computedFields,
-}))
+}));
 
 export const Authors = defineDocumentType(() => ({
   name: 'Authors',
@@ -51,7 +53,7 @@ export const Authors = defineDocumentType(() => ({
     layout: { type: 'string' },
   },
   computedFields,
-}))
+}));
 
 export default makeSource({
   contentDirPath: 'data',
@@ -59,6 +61,11 @@ export default makeSource({
   mdx: {
     cwd: process.cwd(),
     remarkPlugins: [remarkCodeTitles],
-    rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings, [rehypePrismPlus, { ignoreMissing: true }]],
+    rehypePlugins: [
+      rehypeSlug,
+      rehypeAutolinkHeadings,
+      [rehypePrismPlus, { ignoreMissing: true }],
+      rehypeHighlight,
+    ],
   },
-})
+});

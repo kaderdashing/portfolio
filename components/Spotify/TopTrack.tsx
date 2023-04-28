@@ -1,13 +1,13 @@
-import fetcher from 'lib/fetcher'
-import useSWR from 'swr'
-import { TopTracks } from 'types/Spotify'
-import Track from './Track'
+import fetcher from 'lib/fetcher';
+import useSWR from 'swr';
+import { TopTracks } from 'types/Spotify';
+import Track from './Track';
 
 export default function Tracks() {
-  const { data: topTracks } = useSWR<TopTracks>('/api/top-tracks', fetcher)
+  const { data: topTracks } = useSWR<TopTracks>('/api/top-tracks', fetcher);
 
   if (!topTracks) {
-    return null
+    return null;
   }
 
   return (
@@ -19,5 +19,5 @@ export default function Tracks() {
         <Track ranking={index + 1} key={track.songUrl} track={track} />
       ))}
     </div>
-  )
+  );
 }

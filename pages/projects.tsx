@@ -1,8 +1,8 @@
-import Card from '@/components/Card'
-import { PageSEO } from '@/components/SEO'
-import projectsData from '@/data/projectsData'
-import siteMetadata from '@/data/siteMetadata'
-import MainLayout from '@/layouts/MainLayout'
+import Card from '@/components/Card';
+import { PageSEO } from '@/components/SEO';
+import projectsData from '@/data/projectsData';
+import siteMetadata from '@/data/siteMetadata';
+import MainLayout from '@/layouts/MainLayout';
 
 export default function Projects() {
   return (
@@ -32,5 +32,5 @@ export default function Projects() {
         </div>
       </div>
     </MainLayout>
-  )
+  );
 }

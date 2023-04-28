@@ -1,21 +1,21 @@
-import { cloneElement, useContext, useRef } from 'react'
-import { TileContext } from './TileContext'
+import { cloneElement, useContext, useRef } from 'react';
+import { TileContext } from './TileContext';
 
 interface TileProps {
-  page: number
-  children: JSX.Element
+  page: number;
+  children: JSX.Element;
 }
 
 export const Tile = ({ page, children }: TileProps) => {
-  const { currentPage, numOfPages } = useContext(TileContext)
-  const progress = Math.max(0, currentPage - page)
+  const { currentPage, numOfPages } = useContext(TileContext);
+  const progress = Math.max(0, currentPage - page);
 
-  const refContainer = useRef<HTMLDivElement>(null)
+  const refContainer = useRef<HTMLDivElement>(null);
 
-  let opacity = Math.min(1, Math.max(0, progress * 4))
+  let opacity = Math.min(1, Math.max(0, progress * 4));
 
   if (progress > 0.85 && page < numOfPages - 1) {
-    opacity = Math.max(0, (1.0 - progress) * 4)
+    opacity = Math.max(0, (1.0 - progress) * 4);
   }
 
   return (
@@ -29,5 +29,5 @@ export const Tile = ({ page, children }: TileProps) => {
         opacity: opacity,
       })}
     </div>
-  )
-}
+  );
+};
