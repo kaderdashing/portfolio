@@ -23,7 +23,7 @@ export default function Header() {
                 }
               )}
             >
-              <Typewriter
+              {/* <Typewriter
                 options={{
                   strings: ['~/dr1tch'],
                   autoStart: true,
@@ -42,8 +42,8 @@ export default function Header() {
                 //     })
                 //     .start();
                 // }}
-              />
-              {/* dr1tch */}
+              /> */}
+              ~/dr1tch
             </div>
           </Link>
         </div>
