@@ -66,7 +66,7 @@ export default function PostLayout({ content, authorDetails, children, next, pre
             </dd>
           </dl>
         </header>
-        <div>
+        <div className="aspect-h-4 aspect-w-3 md:aspect-w-3 md:aspect-h-2 max-h-[50vh]">
           {cover && (
             // eslint-disable-next-line @next/next/no-img-element
             <img
@@ -85,7 +85,7 @@ export default function PostLayout({ content, authorDetails, children, next, pre
                   },
                 },
               }}
-              className="focus-ring w-full rounded-lg object-cover object-center transition"
+              className="focus-ring max-h-[50vh] w-full  rounded-lg  object-cover object-center shadow-xl transition-opacity"
               loading="lazy"
             />
           )}

@@ -1,0 +1,60 @@
+---
+title: 'Containerization and Docker'
+date: '2023-05-02'
+tags: ['docker', 'DevOps', 'Containers', 'Linux']
+draft: false
+author: 'Youssouf Kacemi'
+summary: 'Introduction to Containerization and Docker'
+cover: 'https://images.unsplash.com/photo-1682752149341-4f4858751731?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80'
+---
+
+## Overview
+
+<TOCInline toc={props.toc} exclude="Overview" toHeading={2} />
+
+## What is Containarization ?
+
+Containerization is packaging up your product (software, web app ... etc) with all its dependencies in a self-contained package so that it can be run uniformly and consistently on any infrastructure without going through troublesome setup process example: missing dependencies... etc.
+
+## Need of Containarization
+
+> That's weird! it works fine on my machine
+
+Let's take a real life example, weeks ago, we have developed a travel scheduling app that can store information about trips, clients and the billings, and also can show you the different place that you can visit, awesome hah!
+
+To implement that we need some dependencies to be installed, for example:
+
+- [Node.js](https://nodejs.org/en/)
+- [Express](http://expressjs.com/)
+- [Redis](https://redis.io/)
+
+Installing node.js and Express.js is really simple, anyone can do it, but how about Redis, it's really a pain in the ass for a beginner. let's assume that you succeeded into installing all those tools, okay that's cool.
+
+But you are working with a group, you are using Linux, and for sure there's someone from your teammates who use Windows, another problem came up, Now you have to consider the inconsistencies of how these two different operating systems handle paths, Or the fact that popular technologies like Nginx are not well optimized to run on Windows. Some technologies like Redis don't even come pre-built for Windows.
+
+Even if you get through the entire development phase, what if the person responsible for managing the servers follows the wrong deployment procedure?
+
+All these issues can be solved if only you could somehow:
+
+- Develop and run the application inside an isolated environment (known as a container) that matches your final deployment environment.
+- Put your application inside a single file (known as an image) along with all its dependencies and necessary deployment configurations.
+- And share that image through a central server (known as a registry) that is accessible by anyone with proper authorization.
+
+Your teammates now, will be able to download the image from the registry, run the exact same application within an isolated environment (container) free from the platform specific inconsistencies, or even deploy directly on a server, since the image comes with all the proper production configurations. How awesome is that!
+
+To conclude, the idea of containerization is to put your application inside a self-contained package, making it portable and reproducible across various environment and infrastructure, it's like putting your product inside box and give it to everyone who want to use it wherever he is and whenever he wants.
+
+## What is Docker ?
+
+Docker is an open-source containerization platform that allows you to containerize your applications, share them using public or private registries, and also to orchestrate them.
+
+Now, Docker is not the only containerization tool on the market, it's just the most popular one.
+
+Here are some others:
+
+1. [AWS Fargate](https://aws.amazon.com/fargate/)
+2. [Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine/)
+3. [Amazon Elastic Container Service (ECS)](https://aws.amazon.com/ecs/)
+4. [Linux Containers (LXC)](https://linuxcontainers.org/lxc/)
+5. [Microsoft Azure](https://azure.microsoft.com/en-us/overview/containers/)
+6. [Google Cloud Platform](https://cloud.google.com/container-options/)

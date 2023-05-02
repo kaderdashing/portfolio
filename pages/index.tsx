@@ -16,7 +16,7 @@ export const getStaticProps = async () => {
   const sortedPosts = sortedBlogPost(allBlogs);
   const posts = allCoreContent(sortedPosts);
 
-  return { props: { posts } };
+  return { props: { posts }, revalidate: 10 };
 };
 
 export default function Home({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
