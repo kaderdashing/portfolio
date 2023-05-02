@@ -28,6 +28,7 @@ module.exports = {
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
         mukta: ['Mukta', ...defaultTheme.fontFamily.sans],
+        roboto: ['Roboto', ...defaultTheme.fontFamily.sans],
       },
       gradientColorStops: {
         'gradient-1-start': '#F20089',
@@ -39,8 +40,14 @@ module.exports = {
       },
 
       colors: {
+        black: {
+          // primary: '#121212'
+          // primary: '#161618'
+          // primary: '#1f2028',
+          primary: 'rgb(17, 17, 17)',
+        },
         primary: {
-          100: '#FDD1D9',
+          100: '# FDD1D9 ',
           200: '#FBA4BC',
           300: '#F575A5',
           400: '#EB519B',

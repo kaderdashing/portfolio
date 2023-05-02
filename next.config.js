@@ -66,6 +66,9 @@ module.exports = withContentlayer(
     eslint: {
       dirs: ['pages', 'components', 'lib', 'layouts', 'scripts'],
     },
+    images: {
+      domains: ['images.unsplash.com'],
+    },
     async headers() {
       return [
         {
@@ -84,9 +87,3 @@ module.exports = withContentlayer(
     },
   })
 );
-
-module.exports = {
-  images: {
-    domains: ['images.unsplash.com'],
-  },
-};

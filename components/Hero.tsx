@@ -9,6 +9,7 @@ import FadeRight from './Animations/FadeRight';
 import FadeUp from './Animations/FadeUp';
 import { renderCanvas } from './renderCanvas';
 import { ScrollContext } from './ScrollObserver';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 export default function Hero(): ReactElement {
   const ref = useRef<HTMLHeadingElement>(null);
@@ -40,38 +41,44 @@ export default function Hero(): ReactElement {
       >
         <AnimatePresence>
           <div className="mx-auto w-screen max-w-4xl px-4 sm:px-9 xl:max-w-6xl xl:px-0">
-            <div className="-mt-36">
-              <div ref={ref} className="flex cursor-default flex-col space-y-2">
-                <FadeUp duration={0.6}>
-                  <h1 className="text-4xl font-extrabold sm:text-7xl md:text-8xl xl:text-9xl">
-                    Youssouf Kacemi
-                  </h1>
-                </FadeUp>
-                <FadeUp duration={0.6} delay={0.2}>
-                  <h2 className="text-3xl font-medium  opacity-90 sm:text-6xl md:text-6xl xl:text-7xl">
-                    {/* I build things for the web. */}
-                    <Typewriter
-                      options={{
-                        strings: [
-                          'I build things for the web and mobile.',
-                          'I design beautiful UIs.',
-                          'I build UI Libraries and open source packages.',
-                        ],
-                        autoStart: true,
-                        loop: true,
-                        delay: 300,
-                      }}
-                    />
-                  </h2>
-                </FadeUp>
-                <FadeRight duration={0.5} delay={0.8}>
+            <div className="-mt-48">
+              <div ref={ref} className="flex cursor-default flex-col space-y-4">
+                <div className="flex w-full justify-center">
+                  <img src="/static/images/avatar.png" alt="" className="h-44 w-44" />
+                </div>
+                <div className="flex w-full flex-col items-center justify-center gap-2">
+                  <FadeUp duration={0.6}>
+                    <h1 className="text-base font-semibold  text-gray-300 sm:text-base md:text-base xl:text-base">
+                      Hi I'm Youssouf Kacemi 👋
+                    </h1>
+                  </FadeUp>
+                  <FadeUp duration={0.6} delay={0.2}>
+                    <h2 className="max-w-xl text-center font-roboto text-4xl font-semibold leading-[3rem]  opacity-90 ">
+                      {/* I build things for the web. */}
+                      UI/UX Designer during the night, Frontend Developer during the day.
+                      {/* <Typewriter
+                        options={{
+                          strings: [
+                            'I build things for the web and mobile.',
+                            'I design beautiful UIs.',
+                            'I build UI Libraries and open source packages.',
+                          ],
+                          autoStart: true,
+                          loop: true,
+                          delay: 300,
+                        }}
+                      /> */}
+                    </h2>
+                  </FadeUp>
+                  {/* <FadeRight duration={0.5} delay={0.8}> */}
                   <Link
                     href="/about"
-                    className="underline-magical text-md w-max cursor-pointer sm:text-lg md:text-xl xl:text-2xl"
+                    className=" mt-12 flex w-max cursor-pointer items-center justify-center gap-3 rounded border border-gray-500 bg-[#1E1E1E] p-4 px-6 font-roboto text-lg text-gray-300"
                   >
-                    Read more about me &rarr;
+                    Read more <ArrowRight />
                   </Link>
-                </FadeRight>
+                  {/* </FadeRight> */}
+                </div>
               </div>
               <div className="absolute bottom-4 left-1/2 -translate-x-1/2 transform md:bottom-8">
                 <div

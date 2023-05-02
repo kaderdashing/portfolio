@@ -1,0 +1,80 @@
+---
+title: 'Simple introduction to docker'
+date: '2023-05-01'
+tags: ['docker', 'DevOps']
+draft: false
+author: 'Youssouf Kacemi'
+summary: 'A guide on how to use the basic commands of docker.'
+cover: 'https://images.unsplash.com/photo-1583826476110-fa770ed968ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=736&q=80'
+---
+
+## Overview
+
+<TOCInline toc={props.toc} exclude="Overview" toHeading={2} />
+
+## Docker Tutorial
+
+## Containarization:
+
+Containerization involves encapsulating or packaging up software code and all its dependencies so that it can run uniformly and consistently on any infrastructure.
+
+- Develop and run the application inside an isolated environment (known as a container) that matches your final deployment environment.Put your application inside a single file (known as an image) along with all its dependencies and necessary deployment configurations.And share that image through a central server (known as a registry) that is accessible by anyone with proper authorization.
+
+## **Image:**
+
+Images are multi-layered self-contained files that act as the template for creating containers. They are like a frozen, read-only copy of a container. Images can be exchanged through registries.
+
+- A cut-down OS
+- Third party libraries
+- Application files
+- Environment variables
+
+## **Container:**
+
+A container is an abstraction at the application layer that packages code and dependencies together. Instead of virtualizing the entire physical machine, containers virtualize the host operating system only.
+
+- Provides an isolated environment.
+- Can be started and restarted.
+- Is just a process.
+
+`docker ps` : list the running processes or the running containers.
+
+{/* ![image-1635793355278.jpg8810266539747586647.jpg](Docker%20Tutorial%20aa7d19d6cbd24be7a8cc91e86ee9a579/image-1635793355278.jpg8810266539747586647.jpg) */}
+
+`**docker run -it ubuntu`\*\* : run a docker image in interactive mode (start a container in interactive mode).
+
+{/* ![image-1635793543529.jpg8817850555717269443.jpg](Docker%20Tutorial%20aa7d19d6cbd24be7a8cc91e86ee9a579/image-1635793543529.jpg8817850555717269443.jpg) */}
+
+`docker images` or `docker image ls` : look all the docker images we have on the machine.
+
+{/* ![image-1635796819275.jpg2924525468123581929.jpg](Docker%20Tutorial%20aa7d19d6cbd24be7a8cc91e86ee9a579/image-1635796819275.jpg2924525468123581929.jpg) */}
+
+`docker ps -a` : to have a look into all the containers running or have run on the past.
+
+```bash
+docker ps -a
+
+# CONTAINER ID        IMAGE            COMMAND             CREATED             STATUS                     PORTS               NAMES
+# 128ec8ceab71        hello-world         "/hello"            14 seconds ago      Exited (0) 13 seconds ago                      exciting_chebyshev
+```
+
+## Docker Registery:
+
+An image registry is a centralized place where you can upload your images and can also download images created by others. Docker Hub is the default public registry for Docker. Another very popular image registry is Quay by Red Hat.
+
+{/* ![docker-hub.png](Docker%20Tutorial%20aa7d19d6cbd24be7a8cc91e86ee9a579/docker-hub.png) */}
+
+## Dockerfiles:
+
+A **_Dockerfile_** contains instructions for building an image.
+
+- `FROM` : specifying the base image. We take this base image that contains files and directories and build our app on top of it.
+- `WORKDIR` : specifying the working directory. Once we use this command, all the following commands will executed in the current working directory.
+- `COPY` and `ADD` : for copying files and directories, with `ADD` we can add files from urls, add will automatically uncompress the zip files.
+- `RUN` : for executing operating system commands (ex: _linux_ commands.).
+- `ENV` : setting environment variables.
+- `EXPOSE` : for telling docker that our container is starting an giving port.
+- `USER` : for specifying the user that should run the application ( typically a user with limited privileges).
+- `CMD` and `ENTRYPOINT` : specifying the commands that should be executed when u start the container.
+
+{/* ![image-1635795847941.jpg2145079471889618662.jpg](Docker%20Tutorial%20aa7d19d6cbd24be7a8cc91e86ee9a579/image-1635795847941.jpg2145079471889618662.jpg) */}

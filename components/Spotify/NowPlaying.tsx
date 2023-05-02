@@ -29,15 +29,15 @@ export default function NowPlaying() {
       <AnimatedBars />
       <div className="inline-flex max-w-[70%] items-center space-x-2 text-sm sm:max-w-[90%] sm:text-base">
         <a
-          className="inline-block truncate font-medium text-gray-800 dark:text-gray-200"
+          className="inline-block truncate font-semibold text-emerald-600 dark:text-emerald-400"
           href={nowPlaying.songUrl}
           target="_blank"
           rel="noopener noreferrer"
         >
           {nowPlaying.title}
         </a>
-        <span className="mx-2 text-gray-500 dark:text-gray-300">{' – '}</span>
-        <p className="inline-block truncate text-gray-500 dark:text-gray-300">
+        <span className="mx-2 text-emerald-500 dark:text-emerald-300">{' – '}</span>
+        <p className="inline-block truncate font-medium text-emerald-500 dark:text-emerald-300">
           {nowPlaying.artist}
         </p>
       </div>

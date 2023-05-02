@@ -2,6 +2,7 @@ import '@/css/prism.css';
 import '@/css/tailwind.css';
 import '@fontsource/mukta';
 import '@fontsource/inter';
+import '@fontsource/roboto';
 
 import LogRocket from '@/components/Logrocket';
 import ProgressBar from '@/components/ProgressBar';

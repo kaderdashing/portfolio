@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion';
+import { Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 import { BsMoonFill, BsSunFill } from 'react-icons/bs';
@@ -24,18 +25,18 @@ const ThemeSwitch = () => {
       whileHover={{ scale: 1.2 }}
       onClick={() => setTheme(resolvedTheme === 'dark' ? 'light' : 'dark')}
     >
-      <svg
+      {/* <svg
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 20 20"
         fill="currentColor"
         className="text-gray-900 dark:text-gray-100"
-      >
-        {mounted && (theme === 'dark' || resolvedTheme === 'dark') ? (
-          <BsSunFill size={16} />
-        ) : (
-          <BsMoonFill size={18} />
-        )}
-      </svg>
+      > */}
+      {mounted && (theme === 'dark' || resolvedTheme === 'dark') ? (
+        <Sun className="h-6 w-6 stroke-gray-900 stroke-2 dark:stroke-white" size={16} />
+      ) : (
+        <Moon className="h-6 w-6 stroke-gray-900 stroke-2 dark:stroke-white" size={18} />
+      )}
+      {/* </svg> */}
     </motion.button>
   );
 };

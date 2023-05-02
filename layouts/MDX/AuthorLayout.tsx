@@ -15,24 +15,31 @@ export default function AuthorLayout({ children, content }: Props) {
     <>
       <PageSEO title={`About - ${name}`} description={`About me - ${name}`} />
       <div className="pt-8">
-        <div className="mb-8 flex flex-col-reverse items-center justify-between sm:flex-row sm:items-center">
-          <div className="text-center sm:text-left">
-            <h1 className="text-xl font-bold md:text-3xl lg:text-4xl">Dale Larroder</h1>
-            <h2 className="text-sm font-normal md:text-base">
-              {occupation} <span className="font-semibold">{company}</span>
-            </h2>
+        <div className="mb-8 flex flex-col-reverse items-center justify-between gap-8 md:flex-row md:items-center">
+          <div className="max-w-sm text-center md:w-1/2 md:text-left lg:max-w-full">
+            <h1 className="mb-2 font-roboto text-xl font-medium md:text-2xl lg:text-3xl">
+              Hi, I'm Youssouf Kacemi, I'm a UI/UX Designer and Frontend Developer
+            </h1>
+            <h1 className="font-roboto text-xl font-medium  text-gray-400 md:text-2xl lg:text-3xl ">
+              {/* {occupation} <span className="font-semibold">{company}</span> */}
+              Building beautiful and easy to use UIs for web and mobile applications, UI libraries,
+              UI/UX Designs.
+            </h1>
           </div>
-          <div>
+          <div className="flex w-1/2 items-center justify-center align-middle ">
             <Image
-              alt="Dale Larroder"
-              height={130}
-              width={130}
+              alt="Youssouf Kacemi"
+              height={300}
+              width={300}
               src={avatar || ''}
-              className="rounded-full object-scale-down grayscale"
+              className="rounded-full object-scale-down grayscale "
             />
           </div>
         </div>
-        <div className="prose max-w-none pb-8 text-justify text-sm dark:prose-dark md:text-lg xl:col-span-2">
+        <div
+          id="mdx"
+          className="prose max-w-none pb-8 text-justify text-sm dark:prose-dark md:text-lg xl:col-span-2"
+        >
           {children}
         </div>
       </div>

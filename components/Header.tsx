@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 import CommandPalette from './CommandPalette/CommandPalette';
 import MobileNav from './MobileNav';
 import ThemeSwitch from './ThemeSwitch';
-import Typewriter from 'typewriter-effect';
+// import Typewriter from 'typewriter-effect';
 
 export default function Header() {
   const router = useRouter();
@@ -17,7 +17,7 @@ export default function Header() {
           <Link href="/" className="flex items-center justify-between" aria-label="Home">
             <div
               className={classNames(
-                'horizontal-underline hidden font-mukta text-2xl font-extrabold sm:block',
+                'horizontal-underline font-inter hidden text-xl font-extrabold sm:block',
                 {
                   'horizontal-underline-active': router.pathname === '/',
                 }
@@ -29,19 +29,6 @@ export default function Header() {
                   autoStart: true,
                   loop: true,
                 }}
-                // onInit={(typewriter) => {
-                //   typewriter
-                //     .typeString('dritch')
-                //     .callFunction(() => {
-                //       console.log('String typed out!');
-                //     })
-                //     .pauseFor(2500)
-                //     .deleteAll()
-                //     .callFunction(() => {
-                //       console.log('All strings were deleted');
-                //     })
-                //     .start();
-                // }}
               /> */}
               ~/dr1tch
             </div>
