@@ -1,9 +1,11 @@
 {
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "editor.codeActionsOnSave": {
     "source.fixAll": false
-  }
+  },
+  "editor.formatOnPaste": true,
+  "diffEditor.codeLens": false
 }

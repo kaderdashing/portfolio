@@ -53,7 +53,7 @@ export default function PostLayout({ content, authorDetails, children, next, pre
           <PageTitle>{title}</PageTitle>
           <dl>
             <dt className="sr-only">Published on</dt>
-            <dd className="mt-2 flex flex-col justify-start text-base font-semibold leading-6 text-gray-300 sm:flex-row sm:space-x-2">
+            <dd className="mt-2 flex flex-col justify-start text-base font-semibold leading-6 text-gray-700 dark:text-gray-300 sm:flex-row sm:space-x-2">
               <div className="flex items-center justify-center space-x-2 font-semibold">
                 <span>{author}</span>
                 <span>-</span>
@@ -98,7 +98,7 @@ export default function PostLayout({ content, authorDetails, children, next, pre
             <div id="mdx" className="prose max-w-none pt-8 pb-8 dark:prose-dark">
               {children}
               <PostNavigation prev={prev} next={next} />
-              <PostComments />
+              {/* <PostComments /> */}
             </div>
           </div>
         </div>

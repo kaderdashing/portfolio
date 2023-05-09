@@ -60,12 +60,6 @@ export default function Intro() {
           >
             I&apos;m passionate about learning new skills and improving myself everyday.
           </span>
-          <span
-            className="introText inline-block after:content-['_']"
-            style={{ opacity: opacityForBlock(progress, 4) }}
-          >
-            I love 🤤 eating and making Spaghetti 🍝 and pizza 🍕.
-          </span>
         </div>
       </div>
     </div>

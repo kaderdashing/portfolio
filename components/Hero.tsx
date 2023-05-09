@@ -44,11 +44,15 @@ export default function Hero(): ReactElement {
             <div className="-mt-48">
               <div ref={ref} className="flex cursor-default flex-col space-y-4">
                 <div className="flex w-full justify-center">
-                  <img src="/static/images/avatar.png" alt="" className="h-44 w-44" />
+                  <img
+                    src="/static/images/avatar.png"
+                    alt=""
+                    className="h-44 w-44 rounded-full shadow-lg"
+                  />
                 </div>
                 <div className="flex w-full flex-col items-center justify-center gap-2">
                   <FadeUp duration={0.6}>
-                    <h1 className="text-base font-semibold  text-gray-300 sm:text-base md:text-base xl:text-base">
+                    <h1 className="text-base font-semibold  text-gray-400 dark:text-slate-300 sm:text-base md:text-base xl:text-base">
                       Hi I'm Youssouf Kacemi 👋
                     </h1>
                   </FadeUp>

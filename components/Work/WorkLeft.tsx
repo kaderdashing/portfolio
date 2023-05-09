@@ -11,7 +11,9 @@ export function WorkLeft({ children, progress }: WorkProps) {
       className="relative mx-12 flex h-[30vh] flex-col items-center justify-center text-3xl lg:h-auto lg:text-3xl"
       style={{ transform: `translateY(${translateY}px)` }}
     >
-      <div className="relative leading-10 text-white">{children}</div>
+      <div className="relative flex flex-col items-start justify-start gap-4 leading-10 text-white">
+        {children}
+      </div>
     </div>
   );
 }

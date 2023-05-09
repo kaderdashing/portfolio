@@ -171,7 +171,9 @@ pre[class*='language-'] {
     width: fit-content;
 }
 
-#mdx ul li a {
+#mdx ul li a,
+#mdx ol li a,
+#mdx p a {
     background-image: linear-gradient(to right, #10b981, #10b981);
     background-repeat: no-repeat;
     background-position: 0 100%;
@@ -181,17 +183,23 @@ pre[class*='language-'] {
     color: inherit;
 }
 
-#mdx ul li a:focus {
+#mdx ul li a:focus,
+#mdx ol li a:focus,
+#mdx p a:focus {
     background-size: 100% 100%;
 }
 
-#mdx ul li a:hover {
+#mdx ul li a:hover,
+#mdx ol li a:hover,
+#mdx p a:hover {
     background-size: 100% 100%;
     color: #fff;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-    #mdx ul li a {
+    #mdx ul li a,
+    #mdx ol li a,
+    #mdx p a {
         transition: all 0.3s ease-in-out;
     }
 }
