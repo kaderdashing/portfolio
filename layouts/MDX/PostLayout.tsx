@@ -25,22 +25,22 @@ interface Props {
 
 export default function PostLayout({ content, authorDetails, children, next, prev }: Props) {
   const { slug, date, title, author, readingTime, cover } = content;
-  React.useEffect(() => {
-    const h1Elements = document.querySelectorAll('#mdx > h1');
-    const h2Elements = document.querySelectorAll('#mdx > h2');
-    const elements = [...h1Elements, ...h2Elements];
-    console.log({ elements });
-    const group: RoughAnnotation[] = [];
-    elements.forEach((element) => {
-      const annotatedElement = annotate(element as HTMLElement, {
-        type: 'highlight',
-        color: '#10b981',
-      });
-      group.push(annotatedElement);
-    });
-    const ag = annotationGroup(group);
-    ag.show();
-  }, []);
+  // React.useEffect(() => {
+  //   const h1Elements = document.querySelectorAll('#mdx > h1');
+  //   const h2Elements = document.querySelectorAll('#mdx > h2');
+  //   const elements = [...h1Elements, ...h2Elements];
+  //   console.log({ elements });
+  //   const group: RoughAnnotation[] = [];
+  //   elements.forEach((element) => {
+  //     const annotatedElement = annotate(element as HTMLElement, {
+  //       type: 'highlight',
+  //       color: '#10b981',
+  //     });
+  //     group.push(annotatedElement);
+  //   });
+  //   const ag = annotationGroup(group);
+  //   ag.show();
+  // }, []);
   return (
     <>
       <BlogSEO
