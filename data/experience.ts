@@ -33,6 +33,15 @@ const experiences = [
     ],
   },
   {
+    title: 'Internship Trainee',
+    company: 'Data Master',
+    location: 'Tlemcen',
+    period: 'May 2021 - July 2022',
+    tasks: [
+      'Built a web application, that deals with appointments and human resources, used React and tailwindcss for the frontend, Django for the backend, and SQL database, also designed the web application with figma.',
+    ],
+  },
+  {
     title: 'Freelancer',
     location: 'Tlemcen',
     period: 'June 2018 - Now',
