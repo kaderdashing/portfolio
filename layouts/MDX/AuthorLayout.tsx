@@ -57,6 +57,7 @@ export default function AuthorLayout({ children, content }: Props) {
                     {experience.title}
                     {experience.company && (
                       <>
+                        {' '}
                         at{' '}
                         <span className="font-semibold text-emerald-500">{experience.company}</span>
                       </>
