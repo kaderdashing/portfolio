@@ -7,5 +7,6 @@
     "source.fixAll": false
   },
   "editor.formatOnPaste": true,
-  "diffEditor.codeLens": false
+  "diffEditor.codeLens": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
 }
