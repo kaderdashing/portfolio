@@ -43,11 +43,11 @@ export default function Footer() {
                 <FaSpotify className="sm:text-lg" />
               </a>
             </li>
-            <li>
+            {/* <li>
               <a href={siteMetadata.steam} target="_blank" rel="noreferrer" aria-label="steam">
                 <FaSteam className="sm:text-lg" />
               </a>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
