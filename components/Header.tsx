@@ -17,7 +17,7 @@ export default function Header() {
           <Link href="/" className="flex items-center justify-between" aria-label="Home">
             <div
               className={classNames(
-                'horizontal-underline font-inter hidden text-xl font-extrabold sm:block text-emerald-600',
+                'horizontal-underline font-inter hidden text-xl font-extrabold text-emerald-600 sm:block ',
                 {
                   'horizontal-underline-active': router.pathname === '/',
                 }
