@@ -18,7 +18,7 @@ export const getStaticProps = async () => {
 
   return { props: { posts }, revalidate: 10 };
 };
-
+// UI/UX Designer || React.js | Next.js | React Native | Vue.js | Typescript | Node.js |
 export default function Home({ posts }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <>

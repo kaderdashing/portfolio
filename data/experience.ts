@@ -1,9 +1,15 @@
 const experiences = [
   {
+    title: 'Front-End Engineer',
+    company: 'Evercam - Construction Cameras',
+    location: 'Tlemcen',
+    period: 'September 2023 - Now',
+  },
+  {
     title: 'Lead Front-end engineer',
     company: 'Data Master',
     location: 'Tlemcen',
-    period: 'May 2023 - Now',
+    period: 'May 2023 - September 2023',
     tasks: [
       'Projects initialization (templates), choose the tech stack, setting up github pipelines (CI/CD with github actions). also defining best practices and rules for guarantee the code to be clean.',
       'Mentor other developers inside the team and participate in daily meetings, also doing code reviews.',

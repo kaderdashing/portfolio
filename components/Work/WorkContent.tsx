@@ -3,7 +3,7 @@ import { WorkContainer } from './WorkContainer';
 import { WorkLeft } from './WorkLeft';
 import { WorkRight } from './WorkRight';
 import { WorkTile } from './workTiles';
-import { MapPin, Pointer } from 'lucide-react';
+import { MapPin } from 'lucide-react';
 
 interface WorkContentProps {
   work: WorkTile;
@@ -12,7 +12,6 @@ interface WorkContentProps {
 
 export default function WorkContent({ work, progress = 0 }: WorkContentProps) {
   const { title, description, image, country } = work;
-  console.log({ work });
   return (
     <WorkContainer>
       <WorkLeft progress={progress}>

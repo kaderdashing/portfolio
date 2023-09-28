@@ -40,10 +40,10 @@ export default function AuthorLayout({ children, content }: Props) {
         <div className="prose max-w-none pb-8 text-justify text-sm dark:prose-dark md:text-lg xl:col-span-2">
           <h2>Who am I ?</h2>
           <p>
-            I am a Front-end Developer and UI/UX Designer, who has 2 years of commercial experience
-            in building beautiful and easy to use websites and Web Applications and Mobiles Apps,
-            and more than 1 years of building , UI libraries, Web Apps, and E-Commerce websites as a
-            Freelancer. Also an open source lover and contributor.
+            I am a Front-end Developer and UI/UX Designer, who has more than 2 years of commercial
+            experience in building beautiful and easy to use websites and Web Applications and
+            Mobiles Apps, and more than 4 years of building , UI libraries, Web Apps, and E-Commerce
+            websites as a Freelancer. Also an open source lover and contributor.
           </p>
         </div>
         <div className="mb-16 flex flex-col justify-start gap-8">
@@ -68,16 +68,18 @@ export default function AuthorLayout({ children, content }: Props) {
                   <span className="text-lg text-emerald-700 transition duration-150 ease-in-out focus:text-emerald-700 hover:text-emerald-700 active:text-emerald-700 dark:text-emerald-400 dark:focus:text-emerald-500 dark:hover:text-emerald-500 dark:active:text-emerald-700">
                     {experience.location} | {experience.period}
                   </span>
-                  <ul>
-                    {experience.tasks.map((task) => (
-                      <li
-                        key={task}
-                        className="ml-6 mb-4 mt-2 list-disc text-base text-neutral-600 first:mt-4 dark:text-neutral-300"
-                      >
-                        {task}
-                      </li>
-                    ))}
-                  </ul>
+                  {experience.tasks && experience.tasks.length > 0 && (
+                    <ul>
+                      {experience.tasks.map((task) => (
+                        <li
+                          key={task}
+                          className="ml-6 mb-4 mt-2 list-disc text-base text-neutral-600 first:mt-4 dark:text-neutral-300"
+                        >
+                          {task}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                   {/* <button
                     type="button"
                     className="inline-block rounded bg-emerald-600 px-4 pb-[5px] pt-[6px] text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out focus:bg-emerald-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 hover:bg-emerald-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] active:bg-emerald-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"

@@ -22,6 +22,17 @@ export const workTiles: WorkTile[] = [
   },
   {
     description: 'I designed and built',
+    title: 'International Plant Protection Symposium (1st SIPV - ENSA - 2023)',
+    image: {
+      src: '/static/images/project/ENSA-BANNER.png',
+      width: 900,
+      height: 900,
+    },
+    link: 'https://www.ensa-sipv-2023.com/',
+    country: 'Algeria 🇩🇿',
+  },
+  {
+    description: 'I designed and built',
     title: 'Evology.ai',
     image: {
       src: '/static/images/project/evology.png',
