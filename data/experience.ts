@@ -59,3 +59,7 @@ const experiences = [
 ];
 
 export default experiences;
+
+// - [formik-wizard](https://github.com/dr1tch/formik-wizard): Build multi step forms using Formik and validations.
+// - [dashooks](https://github.com/dr1tch/dashooks): collection of useful hooks that I've been copying from project to project. Now you can all use it.
+// - [insuper-ui library](https://github.com/dr1tch/insuper-ui) and [insuper-ui design system on figma](https://dribbble.com/dr1tch/)
