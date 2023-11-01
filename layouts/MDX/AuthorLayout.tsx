@@ -29,7 +29,7 @@ export default function AuthorLayout({ children, content }: Props) {
           </div>
           <div className="flex w-1/2 items-center justify-center align-middle ">
             <Image
-              alt="Youssouf Kacemi"
+              alt="Megherbi abdelkader"
               height={300}
               width={300}
               src={avatar || ''}

@@ -1,4 +1,4 @@
-# youssouf-kacemi.vercel.app ⚡️
+# abdelkader-megherbi.vercel.app ⚡️
 
 - **Framework**: [Next.js](https://nextjs.org/)
 - **Deployment**: [Vercel](https://vercel.com)
@@ -12,15 +12,14 @@
 
 1. Clone this repo
 
-```bash
-git clone git@github.com:dr1tch/youssoufkacemi.io.git
-```
+````bash
+git clone git@github.com:kaderdashing/portfolio.git```
 
 2. Change directory
 
 ```sh
-cd youssoufkacemi.io
-```
+cd portfolio.io
+````
 
 3. Install yarn packages
 
@@ -48,4 +47,3 @@ SPOTIFY_CLIENT_ID=<Your env>
 ```bash
 yarn dev
 ```
-
