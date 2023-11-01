@@ -40,10 +40,10 @@ export default function AuthorLayout({ children, content }: Props) {
         <div className="prose max-w-none pb-8 text-justify text-sm dark:prose-dark md:text-lg xl:col-span-2">
           <h2>Who am I ?</h2>
           <p>
-            I am a Front-end Developer and UI/UX Designer, who has more than 2 years of commercial
+            I am a Front-end & back-end Developer, who has more than 1 years of commercial
             experience in building beautiful and easy to use websites and Web Applications and
-            Mobiles Apps, and more than 4 years of building , UI libraries, Web Apps, and E-Commerce
-            websites as a Freelancer. Also an open source lover and contributor.
+            Mobiles Apps, and more than 3 years of building , Web Apps, and E-Commerce websites as a
+            Freelancer. Also an open source lover.
           </p>
         </div>
         <div className="mb-16 flex flex-col justify-start gap-8">
