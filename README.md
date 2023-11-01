@@ -13,13 +13,13 @@
 1. Clone this repo
 
 ```bash
-git clone git@github.com:dr1tch/youssoufkacemi.io.git
+git clone git@github.com:kaderdashing/portfolio.git
 ```
 
 2. Change directory
 
 ```sh
-cd youssoufkacemi.io
+cd portfolio.io 
 ```
 
 3. Install yarn packages
