@@ -28,12 +28,12 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
         <Header />
       </SectionContainer>
       <Hero />
-      {/* <Intro />
+      <Intro />
       <Works />
       <HomeLayout>
         <RecentPosts posts={posts} />
         <TopTracks />
-      </HomeLayout> */}
+      </HomeLayout>
     </>
   );
 }
