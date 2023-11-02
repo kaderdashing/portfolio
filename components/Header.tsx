@@ -5,7 +5,8 @@ import { useRouter } from 'next/router';
 import CommandPalette from './CommandPalette/CommandPalette';
 import MobileNav from './MobileNav';
 import ThemeSwitch from './ThemeSwitch';
-// import Typewriter from 'typewriter-effect';
+import TypewriterComponent, { TypewriterClass } from 'typewriter-effect';
+import Typewriter from 'typewriter-effect';
 
 export default function Header() {
   const router = useRouter();
@@ -23,14 +24,13 @@ export default function Header() {
                 }
               )}
             >
-              {/* <Typewriter
+              <Typewriter
                 options={{
-                  strings: ['~/dr1tch'],
+                  strings: ['~/Home'],
                   autoStart: true,
                   loop: true,
                 }}
-              /> */}
-              ~/dr1tch
+              />
             </div>
           </Link>
         </div>
