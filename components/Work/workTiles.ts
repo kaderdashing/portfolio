@@ -22,7 +22,7 @@ export const workTiles: WorkTile[] = [
   },
   {
     description: 'I designed and built',
-    title: 'International Plant Protection Symposium (1st SIPV - ENSA - 2023)',
+    title: 'International Plant Protection Symposium (1st SIPV - ENSA - 2023)    ',
     image: {
       src: '/static/images/project/ENSA-BANNER.png',
       width: 900,
@@ -69,6 +69,16 @@ export const workTiles: WorkTile[] = [
     image: {
       src: '/static/images/project/e-shop.png',
       width: 700,
+      height: 500,
+    },
+    country: 'Algeria 🇩🇿',
+  },
+  {
+    description: `I designed and built`,
+    title: 'kotibook',
+    image: {
+      src: '/static/images/project/2.png',
+      width: 800,
       height: 500,
     },
     country: 'Algeria 🇩🇿',
