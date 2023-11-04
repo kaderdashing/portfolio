@@ -29,8 +29,8 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
       </SectionContainer>
       <Hero />
       <Intro />
-      {/* <Works />
-      <HomeLayout>
+      <Works />
+      {/*<HomeLayout>
         <RecentPosts posts={posts} />
         <TopTracks />
       </HomeLayout> */}
