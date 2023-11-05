@@ -15,9 +15,9 @@ export const workTiles: WorkTile[] = [
     description: `Here are things`,
     title: `I've worked on`,
     image: {
-      src: '/static/images/project/all.png',
+      src: '/static/images/project/all1.png',
       width: 700,
-      height: 770,
+      height: 1000,
     },
   },
   {

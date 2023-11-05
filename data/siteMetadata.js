@@ -1,8 +1,8 @@
 const siteMetadata = {
-  title: 'Megherbi abdelkader111111',
+  title: 'Megherbi abdelkader (dashing)',
   author: 'Megherbi abdelkader',
   headerTitle: 'kader',
-  description: 'UI/UX Designer / Frontend Engineer',
+  description: 'UI/UX Designer / Frontend Engineer / backend',
   language: 'en-us',
   theme: 'dark', // system, dark or light
   siteUrl: 'https://dalelarroder.com',
