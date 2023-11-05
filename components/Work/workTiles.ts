@@ -15,14 +15,14 @@ export const workTiles: WorkTile[] = [
     description: `Here are things`,
     title: `I've worked on`,
     image: {
-      src: '/static/images/project/all.png',
+      src: '/static/images/project/all1.png',
       width: 700,
-      height: 770,
+      height: 1000,
     },
   },
   {
     description: 'I designed and built',
-    title: 'International Plant Protection Symposium (1st SIPV - ENSA - 2023)',
+    title: 'International Plant Protection Symposium (1st SIPV - ENSA - 2023)    ',
     image: {
       src: '/static/images/project/ENSA-BANNER.png',
       width: 900,
@@ -33,78 +33,13 @@ export const workTiles: WorkTile[] = [
   },
   {
     description: 'I designed and built',
-    title: 'Evology.ai',
+    title: 'Agence bin',
     image: {
-      src: '/static/images/project/evology.png',
+      src: '/static/images/project/1.png',
       width: 700,
       height: 754,
     },
-    link: 'https://www.evology.ai',
-    country: 'Slovenia 🇸🇮',
-  },
-  {
-    description: `I maintained`,
-    title: 'University Publications Office (OPU)',
-    image: {
-      src: '/static/images/project/opu.png',
-      width: 600,
-      height: 717,
-    },
-    link: 'https://st.iqraa.opu.dz/',
-    country: 'Algeria 🇩🇿',
-  },
-  {
-    description: `I designed and built`,
-    title: 'Sellforms',
-    image: {
-      src: '/static/images/project/sellforms.png',
-      width: 600,
-      height: 717,
-    },
-    link: 'https://sellforms.com/',
-    country: 'USA 🇺🇸',
-  },
-  {
-    description: `I designed and built`,
-    title: 'Coordate',
-    image: {
-      src: '/static/images/project/lbb-list.png',
-      width: 600,
-      height: 500,
-    },
-    link: 'https://coordate.com/',
-    country: 'France 🇫🇷',
-  },
-  {
-    description: `I maintained`,
-    title: 'Primrecrut',
-    image: {
-      src: '/static/images/project/primrecrut.png',
-      width: 700,
-      height: 900,
-    },
-    link: 'https://primrecrut.com/',
-    country: 'France 🇫🇷',
-  },
-  {
-    description: `I build`,
-    title: '&Arise',
-    image: {
-      src: '/static/images/project/and-arise.png',
-      width: 700,
-      height: 900,
-    },
-    link: 'https://and-arise.com/',
-    country: 'USA 🇺🇸',
-  },
-  {
-    description: `I designed and built`,
-    title: 'Taskbox',
-    image: {
-      src: '/static/images/project/alert.png',
-      width: 600,
-      height: 500,
-    },
+    link: 'https://agencebin.com/',
     country: 'Algeria 🇩🇿',
   },
   {
@@ -127,16 +62,7 @@ export const workTiles: WorkTile[] = [
     },
     country: 'Algeria 🇩🇿',
   },
-  {
-    description: `I redesigned`,
-    title: 'Lemsa Innovation official website',
-    image: {
-      src: '/static/images/project/LEMSA.png',
-      width: 700,
-      height: 500,
-    },
-    country: 'Algeria 🇩🇿',
-  },
+
   {
     description: `I designed`,
     title: 'Store stock Management App',
@@ -148,11 +74,11 @@ export const workTiles: WorkTile[] = [
     country: 'Algeria 🇩🇿',
   },
   {
-    description: `I redesigned`,
-    title: 'Data Master official website',
+    description: `I designed and built`,
+    title: 'kotibook',
     image: {
-      src: '/static/images/project/data-master.png',
-      width: 900,
+      src: '/static/images/project/2.png',
+      width: 800,
       height: 500,
     },
     country: 'Algeria 🇩🇿',
