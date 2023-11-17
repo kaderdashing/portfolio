@@ -16,7 +16,6 @@ export const getStaticProps = async () => {
   const sortedPosts = sortedBlogPost(allBlogs);
   const posts = allCoreContent(sortedPosts);
 
-  console.log({ posts });
   return { props: { posts }, revalidate: 20 };
 };
 // UI/UX Designer || React.js | Next.js | React Native | Vue.js | Typescript | Node.js |
@@ -29,11 +28,11 @@ export default function Home({ posts }: InferGetStaticPropsType<typeof getStatic
       </SectionContainer>
       <Hero />
       <Intro />
-       <Works />
+      <Works />
       <HomeLayout>
         <RecentPosts posts={posts} />
         <TopTracks />
-      </HomeLayout> 
+      </HomeLayout>
     </>
   );
 }

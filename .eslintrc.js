@@ -18,16 +18,8 @@ module.exports = {
     'next/core-web-vitals',
   ],
   rules: {
-    'prettier/prettier': ['error', { semi: true }],
     'react/react-in-jsx-scope': 'off',
-    'jsx-a11y/anchor-is-valid': [
-      'error',
-      {
-        components: ['Link'],
-        specialLink: ['hrefLeft', 'hrefRight'],
-        aspects: ['invalidHref', 'preferButton'],
-      },
-    ],
+
     'react/prop-types': 0,
     'no-unused-vars': 0,
     'react/no-unescaped-entities': 'off',
